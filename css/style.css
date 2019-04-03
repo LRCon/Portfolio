@@ -1,0 +1,249 @@
+/* Landing Page CSS */
+.redbord{
+  border: 2px solid red;
+}
+.roboto {
+	font-family: roboto;
+}
+body{
+	background-color: #f8f9fa !important;
+}
+ul.portlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li.portlist {
+  padding-left: 1em;
+  text-indent: .3em;
+}
+li.portlist::before {
+  display:          inline-block;
+  vertical-align:   middle;
+  width:           7px;
+  height:           7px;
+  background-color: #4E8FCC;
+  margin-right:     8px;
+  border-radius: 50%;
+  content:          ' '
+}
+.main-section {
+	background-image: url("assets/background.png");
+	background-attachment: fixed;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.overlay {
+	background-color: rgba(0,0,0,.6);
+	height: 100%;
+	width: 100%;
+}
+.linkoutline {
+	background: transparent;
+	border: 1px solid #f8f9fa;
+	color: #f8f9fa !important;
+	border-radius: 5px;
+}
+.linkoutline:hover, .btn-outline-light:hover{
+	background-color: #4E8FCC;
+	color: #f8f9fa !important;
+}
+.border-seperator {
+	border-bottom: 1px solid #d6e1e5;
+}
+.portdiv {
+	width: 100% !important;
+	margin: auto !important;
+}
+.spacer {
+	width: 100%;
+	height: 105px;
+}
+.hidden {
+	display: none;
+}
+.hideme, .readyfade {
+    opacity: 0;
+}
+#aboutmecard {
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#startchange {
+	display: block;
+    position: absolute;
+    bottom: 110px;
+    visibility: hidden;
+}
+a#AboutMe.anchor {
+    display: block;
+    position: relative;
+    top: -98px;
+    visibility: hidden;
+}
+a#Portfolio.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+#work-tab.active, #projects-tab.active {
+	background-color: transparent;
+	color: #4E8FCC !important;
+}
+.nav-tabs .nav-link {
+	border: 2px solid transparent;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	border-color: #dee2e6 #dee2e6 #f8f9fa;
+}
+/* Customizing Bootstrap Colors */
+.bg-primary {
+	background-color: #4E8FCC !important;
+}
+.btn-outline-primary {
+	color: #4E8FCC !important;
+	border-color: #4E8FCC !important;
+}
+.btn-outline-primary:hover {
+	background-color: #4E8FCC !important;
+	color: white !important;
+}
+/* GALLERY CSS */
+.square {
+	width: 46%;
+	margin: 2%;
+	float: left;
+	position: relative;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+.square:hover {
+	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.tagoverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, .7);
+}
+.square:hover .tagoverlay {
+  opacity: 1;
+}
+.tagslist {
+	margin: auto;
+	padding: 0;
+	width: 80%;
+	list-style-type: none;
+}
+.tags {
+	display: inline-block;
+    padding: .3em .7em;
+    margin: .3em 0;
+    color: #f8f9fa;
+    background-color: #4E8FCC;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: .8em;
+    position: relative;
+}
+.flexcontainer {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	font-family: roboto;
+}
+.flexdiv {
+	margin: auto;
+	position: relative;
+}
+.visitbtn {
+	display: inline-block;
+    text-align: center;
+	padding: .2em .7em;
+    font-size: 1.25em;
+    font-weight: 500;
+    background-color: #4E8FCC;
+    color: white;
+    border-radius: 3px;
+    margin: 5px 0;
+    border: 1.5px solid white;
+}
+.visitbtn:hover{
+	text-decoration: none;
+	background-color: white;
+    color: #4E8FCC;
+}
+/* MEDIA QUERIES GOING UP IN SIZE
+	EXTRA SMALL DEVICES ARE DEFAULT
+*/
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) {
+
+	}
+
+	/* Medium devices (tablets, 768px and up)*/
+	@media (min-width: 768px) {
+		a#AboutMe.anchor {
+		top: -150px;
+		}
+	}
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+		.portdiv {
+			width: 75% !important;
+		}
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {  }
+
+/* MEDIA QUERIES THAT GO DOWN IN SIZE */
+	/* Extra small devices (portrait phones, less than 576px) */
+	@media (max-width: 576px) {
+		#me {
+			margin-top: 0% !important;
+		}
+		.mecontainer {
+			width: 75%;
+			margin: auto;
+		}
+		.square {
+			width: 100%;
+			margin: 20px 0;
+			float: left;
+			position: relative;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+		}
+	}
+
+	/* Small devices (landscape phones, less than 768px) */
+	@media (max-width: 768px) {
+		#me {
+			margin-top: 45%;
+		}
+	}
+	/* Medium devices (tablets, less than 992px) */
+	@media (max-width: 991.98px) {
+		.mobilenav {
+			background-color: #364357;
+		}
+	}
+
+	/* Large devices (desktops, less than 1200px) */
+	@media (max-width: 1199.98px) {  }
+	/* NOT NEEDED FOR XL */
